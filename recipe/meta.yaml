@@ -1,6 +1,6 @@
 {% set name = "pycvodes" %}
-{% set version = "0.10.6" %}
-{% set sha256 = "0537b96b50cdea15879522cc868fc4257cd7ff3ac43d6e20f3e1668a78ab583a" %}
+{% set version = "0.10.7" %}
+{% set sha256 = "29721ba3ae52c171f54796255ee99979399a0142e6e45fa17367d418c1371b1c" %}
 {% set variant = "openblas" %}
 
 package:
@@ -14,7 +14,7 @@ source:
 
 build:
   number: 0
-  skip: True  # [win]
+  skip: true        # [win and not py>=35]
   features:
     - blas_{{ variant }}  # [not win]
 
