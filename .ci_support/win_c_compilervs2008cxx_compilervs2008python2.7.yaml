@@ -1,0 +1,24 @@
+c_compiler:
+- vs2008
+cxx_compiler:
+- vs2008
+numpy:
+- '1.11'
+openblas:
+- 0.2.20
+pin_run_as_build:
+  openblas:
+    max_pin: x.x.x
+  python:
+    min_pin: x.x
+    max_pin: x.x
+  sundials:
+    max_pin: x.x
+python:
+- '2.7'
+sundials:
+- '2.7'
+zip_keys:
+- - python
+  - c_compiler
+  - cxx_compiler
