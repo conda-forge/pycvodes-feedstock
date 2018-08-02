@@ -1,6 +1,6 @@
 {% set name = "pycvodes" %}
-{% set version = "0.11.3" %}
-{% set sha256 = "5385d83d4943a16a7836f099168f10b341d5d7e57f32c3ad1c1f06389a39ad35" %}
+{% set version = "0.11.5" %}
+{% set sha256 = "375b791ee70e05ad3fae3e08c7935776b491b6c6f5ace99ed8f3694b366179a0" %}
 {% set variant = "openblas" %}
 
 package:
