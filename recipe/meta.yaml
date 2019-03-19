@@ -1,7 +1,6 @@
 {% set name = "pycvodes" %}
 {% set version = "0.11.10" %}
 {% set sha256 = "7923793931d9e6187b698f860467c50df32f4486aee0dd03b1312955b7e8283f" %}
-{% set variant = "openblas" %}
 
 package:
   name: {{ name|lower }}
@@ -13,26 +12,23 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true        # [win and not py>=35]
   features:
-    - blas_{{ variant }}  # [not win]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - blas 1.1 {{ variant }}  # [not win]
-    - openblas          # [not win]
+    - libblas
+    - libcblas
     - sundials
     - python
     - setuptools
     - pip
     - numpy
   run:
-    - blas 1.1 {{ variant }}  # [not win]
-    - openblas                  # [not win]
     - sundials
     - python
     - {{ pin_compatible('numpy') }}
