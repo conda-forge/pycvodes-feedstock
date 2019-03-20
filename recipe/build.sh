@@ -15,4 +15,4 @@ env = {
 }
 EOF
 export PYCVODES_STRICT=1
-python -m pip install --no-deps --ignore-installed .
+python -m pip install --no-deps --ignore-installed . -vv
