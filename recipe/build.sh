@@ -1,5 +1,5 @@
 #!/bin/bash
-#export PYCVODES_LAPACK=openblas
+export PYCVODES_LAPACK=lapack,blas
 
 # Sundials 2.7:
 #export PYCVODES_SUNDIALS_LIBS=sundials_cvodes,sundials_nvecserial
