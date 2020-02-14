@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '4'
+- '9'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -11,7 +11,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '4'
+- '9'
 libblas:
 - 3.8 *netlib
 liblapack:
@@ -26,9 +26,5 @@ pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
-  sundials:
-    max_pin: x.x
 python:
 - '2.7'
-sundials:
-- '3.2'
