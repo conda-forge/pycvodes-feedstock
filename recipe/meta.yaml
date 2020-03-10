@@ -1,6 +1,6 @@
 {% set name = "pycvodes" %}
-{% set version = "0.12.0" %}
-{% set sha256 = "fa333cb387fd34c6e34c8082d876571c3c8026eaf532990c86568965cda205bf" %}
+{% set version = "0.12.2" %}
+{% set sha256 = "3b799cdbd9e5cc9539e94e2d3aafe4fa5732b7c43073c1102669cbbba8783e36" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  skip: true        # [win and not py>=35]
+  skip: true  # [win and not py>=35]
   features:
 
 requirements:
@@ -43,7 +43,7 @@ about:
   home: https://github.com/bjodah/{{ name }}
   license: BSD 2-Clause
   license_file: LICENSE
-  summary: 'Python wrapper around cvodes (from the sundials library)'
+  summary: Python wrapper around cvodes (from the sundials library)
   doc_url: https://bjodah.github.io/{{ name }}/latest
 
 
