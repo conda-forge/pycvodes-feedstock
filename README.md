@@ -3,7 +3,7 @@ About pycvodes
 
 Home: https://github.com/bjodah/pycvodes
 
-Package license: BSD 2-Clause
+Package license: BSD-2-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pycvodes-feedstock/blob/master/LICENSE.txt)
 
@@ -227,4 +227,5 @@ Feedstock Maintainers
 =====================
 
 * [@bjodah](https://github.com/bjodah/)
+* [@moorepants](https://github.com/moorepants/)
 
