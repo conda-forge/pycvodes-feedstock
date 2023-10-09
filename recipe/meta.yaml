@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win and not py>=35]
   features:
 
@@ -28,6 +28,7 @@ requirements:
     - setuptools
     - pip
     - numpy
+    - cython <3
   run:
     - sundials
     - python
@@ -39,6 +40,9 @@ test:
     - pycvodes
   requires:
     - pytest
+  commands:
+    - python -m pytest --pyargs {{ name }}
+    - python -c "import pathlib as p; from pycvodes import get_include as g; assert open(p.Path(g()) / 'cvodes_cxx.hpp', 'rt').read().startswith('#pragma once')"
 
 about:
   home: https://github.com/bjodah/{{ name }}
