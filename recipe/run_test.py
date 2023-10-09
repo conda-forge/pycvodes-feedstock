@@ -4,6 +4,7 @@
 import os
 import pytest
 import sys
+import pathlib
 from pycvodes import get_include
 
 
@@ -18,7 +19,11 @@ def check_for_header_file():
 if __name__ == '__main__':
     check_for_header_file()
     # https://docs.pytest.org/en/7.3.x/how-to/usage.html#calling-pytest-from-python-code
-    pytest_args = ['--pyargs', 'pycvodes', '-v', '-s']
+    pytest_args = [
+        #'--pyargs', 'pycvodes',
+        os.path.expandvars(str(pathlib.Path(get_include()).parent / "tests")),  # I don't know why --pyargs doesn't work...
+        '-v', '-s'
+    ]
     print("INFO: about to run pytest.main(...) with args: %s" % str(pytest_args))
     pytest_exit_code = pytest.main()
     print("INFO: pytest.main(...) returned exit code: %d" % pytest_exit_code)
