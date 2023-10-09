@@ -40,6 +40,9 @@ test:
     - pycvodes
   requires:
     - pytest
+  commands:
+    - python -m pytest --pyargs {{ name }}
+    - python -c "import pathlib as p; from pycvodes import get_include as g; assert open(p.Path(g()) / 'cvodes_cxx.hpp', 'rt').read().startswith('#pragma once')"
 
 about:
   home: https://github.com/bjodah/{{ name }}
