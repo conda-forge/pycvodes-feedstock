@@ -28,9 +28,9 @@ requirements:
     - setuptools
     - pip
     - numpy
-    - cython <3
+    - cython
   run:
-    - sundials
+    - sundials <7
     - python
     - setuptools  # pkg_resources used
     - {{ pin_compatible('numpy') }}
