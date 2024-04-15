@@ -23,7 +23,7 @@ requirements:
   host:
     - libblas
     - liblapack
-    - sundials
+    - sundials <7
     - python
     - setuptools
     - pip
