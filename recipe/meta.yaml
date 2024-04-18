@@ -1,6 +1,6 @@
 {% set name = "pycvodes" %}
-{% set version = "0.14.2" %}
-{% set sha256 = "73974944aa7376bdafe7ab08008827b3d3ad7e567ef1db705901878c0c439516" %}
+{% set version = "0.14.3" %}
+{% set sha256 = "d2c5e2a41245b036dddb08605baaa5b8e36751fbeebef14b9975afa732d1c150" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win and not py>=35]
   features:
 
@@ -23,14 +23,14 @@ requirements:
   host:
     - libblas
     - liblapack
-    - sundials
+    - sundials <7
     - python
     - setuptools
     - pip
     - numpy
-    - cython <3
+    - cython
   run:
-    - sundials
+    - sundials <7
     - python
     - setuptools  # pkg_resources used
     - {{ pin_compatible('numpy') }}
