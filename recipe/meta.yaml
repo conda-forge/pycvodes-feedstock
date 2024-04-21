@@ -1,6 +1,6 @@
 {% set name = "pycvodes" %}
-{% set version = "0.14.4" %}
-{% set sha256 = "91361ddfa79bdda532786130bdf425e94a5aa958391cda2b5f89b90b4c08ebd2" %}
+{% set version = "0.14.5" %}
+{% set sha256 = "a365534e2d9280011bb2faa804da8bc3eb137e5042a3bce75ebd65019d674a02" %}
 
 package:
   name: {{ name|lower }}
