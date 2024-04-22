@@ -1,6 +1,6 @@
 {% set name = "pycvodes" %}
-{% set version = "0.14.3" %}
-{% set sha256 = "d2c5e2a41245b036dddb08605baaa5b8e36751fbeebef14b9975afa732d1c150" %}
+{% set version = "0.14.5" %}
+{% set sha256 = "a365534e2d9280011bb2faa804da8bc3eb137e5042a3bce75ebd65019d674a02" %}
 
 package:
   name: {{ name|lower }}
@@ -19,6 +19,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - libblas
