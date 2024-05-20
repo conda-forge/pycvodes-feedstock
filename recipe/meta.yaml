@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and not py>=35]
   features:
 
@@ -34,7 +34,6 @@ requirements:
     - sundials <7
     - python
     - setuptools  # pkg_resources used
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
