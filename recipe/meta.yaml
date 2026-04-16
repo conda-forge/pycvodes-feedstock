@@ -24,14 +24,14 @@ requirements:
   host:
     - libblas
     - liblapack
-    - sundials <7
+    - sundials
     - python
     - setuptools
     - pip
     - numpy
     - cython
   run:
-    - sundials <7
+    - sundials
     - python
     - setuptools  # pkg_resources used
 
